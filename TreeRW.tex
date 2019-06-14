@@ -1,0 +1,122 @@
+%!TEX program = xelatex
+
+\documentclass[a4paper,oneside]{ctexbook}
+% oneside 使得页码都显示在右侧，使得左右是对齐的；
+	% 如果真需要要打印，可将oneside变成twoside，或者既然默认如此，可直接删去oneside；
+
+\usepackage[unicode=true,colorlinks,urlcolor=blue,linkcolor=blue,citecolor=green,bookmarksnumbered=true]{hyperref}
+\usepackage{latexsym,amssymb,amsmath,amsbsy,amsopn,amstext,amsthm,amsxtra,color,multicol,multirow,bm,calc,ifpdf}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{diagbox}
+\usepackage{enumerate}
+%\usepackage[numbers,authoryear]{natbib}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{makeidx}
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{changepage}
+\usepackage{algorithmic}
+\usepackage{geometry}
+\usepackage{amsmath}%？？？
+\usepackage{amsthm}%证明环境宏包
+% \geometry{a4paper,scale=0.7}
+
+\graphicspath{{figures/}}
+
+%关于缩进
+\setlength{\parindent}{0pt}
+% \begin{adjustwidth}{0cm}{1cm}
+% \end{adjustwidth}
+
+
+% 设置目录深度之用.
+\setcounter{secnumdepth}{5} % 应指允许的section number depth
+\setcounter{tocdepth}{5} % 可能指非section的目录标签的深度
+% QUE: 更深的目录相应的函数也可以继续写下去吗?比如多个sub的?
+% 下面链接有关于目录深度的定义https://tex.stackexchange.com/questions/186981/is-there-a-subsubsubsection-command
+
+
+\newcommand{\diff}{\,{\mathrm d}}
+\newcommand*{\trans}{^{\mathsf{T}}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\providecommand{\keywords}[1]{\textbf{Keywords:} #1}
+
+
+% \renewcommand\contentsname{Contents}
+% \renewcommand\refname{References}`x'
+% \renewcommand\figurename{Figure}
+% \renewcommand\tablename{Table}
+% \renewcommand\abstractname{Abstract}
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}  % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{ \textbf{Output:}}  % Use Output in the format of Algorithm
+
+
+\linespread{1.5}
+
+
+\begin{document}
+
+\title{ \Huge \textbf{树上在随机环境下的随机游走} }
+	
+\vspace{4em}
+
+\author{钱力}
+
+\date{\today}
+
+\maketitle
+\thispagestyle{empty}
+
+
+
+%\chapter*{前言}
+
+%\addcontentsline{toc}{chapter}{前言}
+
+ 
+
+
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{目录}
+\tableofcontents
+\cleardoublepage
+
+\newtheorem{thm}{定理}[chapter]
+\newtheorem{que}[thm]{问题}
+\newtheorem{pro}[thm]{命题}
+\newtheorem{cor}[thm]{推论}
+\newtheorem{defi}[thm]{定义}
+\newtheorem{lem}[thm]{引理}
+\newtheorem{conjec}[thm]{猜想}
+\newtheorem{tri}[thm]{尝试}
+\newtheorem{pf}[thm]{证明}
+
+
+
+% \include{chapter/Z}
+% \include{chapter/Zd}
+% \include{chapter/Td}
+% \include{chapter/GW}
+% \include{chapter/GWvsTd}
+% \include{chapter/otherTree}
+\include{chapter/EPtag}
+
+% \include{chapter/bib}
+
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{1} % 所有文献
+
+\addcontentsline{toc}{chapter}{参考文献}
+
+
+\end{document}
+
