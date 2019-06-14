@@ -38,3 +38,5 @@ chapter/Z\.tex
 chapter/Zd\.tex
 
 chapter/bib\.tex
+
+*.el
